@@ -51,6 +51,9 @@
 			.opaque {
 				opacity: 1 !important;
 			}
+			.yellow {
+				background-color: #FFFFE0 !important;
+			}
 			.bgFilter {
 				filter: blur(4px);
 				transform: scale(1.05);
@@ -86,8 +89,9 @@
 				transform: scale(1.1);
 			}
 			.time-active {
-				left: 90px !important;
-				top: 40px !important;
+        opacity: 0 !important;
+				<!--/* left: 90px !important;
+				top: 40px !important; */-->
 			}
 			#timeFont {
 				color: #fff;
@@ -499,6 +503,9 @@
 
 				/* user-select: none; */
 			}
+      .white {
+        color: #fff;
+      }
 			.focus {
 				background: #b1afaf;
 			}
@@ -1179,4 +1186,11 @@
 		}, 20);
 	}
 
+  // Change background color
+  document.getElementById('settings-background').onclick = function() {
+    const bgImage = document.getElementById('bgImage');
+    const cover = document.getElementById('cover');
+    bgImage.classList.toggle('opaque');
+    cover.classList.toggle('yellow');
+  };
 </script>
